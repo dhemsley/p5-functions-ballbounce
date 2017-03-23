@@ -9,24 +9,36 @@ function setup(){
 }
 
 function draw(){
-    background(0);
+    background(252, 118, 174);
+    display();
+    move();
+    bounce();
 
-    //display ball
+}
+    
+function display(){
     stroke(255);
     strokeWeight(4);
-    fill(50,250,50);
+    fill(143, 252, 196);
     ellipse(x, y, 50, 50);
+}
 
-    
-    //make ball move
+
+
+function move(){
+     //make ball move
     y = y + speedy;
     x = x + speedx;
-    
-    //ball changes direction when it hits wall
+}
+
+  
+function bounce(){
+//ball changes direction when it hits wall
     if(x>600 || x<0){
         speedx = -speedx;
     }
      if(y>400 || y<0){
         speedy = -speedy;
-    }
+    }    
 }
+  
